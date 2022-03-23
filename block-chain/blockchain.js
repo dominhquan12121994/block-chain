@@ -75,13 +75,13 @@ class Block {
 class Blockchain {
   constructor() {
     this.chain = [this.createGenesisBlock()];
-    this.difficulty = 3;
+    this.difficulty = 2;
     this.pendingTransactions = [];
     this.miningReward = 100;
   }
 
   createGenesisBlock() {
-    return new Block("01/01/2021", "Genesis block", "0");
+    return new Block("02/02/2022", "Genesis block", "0");
   }
 
   getLatestBlock() {

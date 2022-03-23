@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <transactions />
+    <v-app>
+      <transactions />
+    </v-app>
   </div>
 </template>
 
@@ -14,41 +16,11 @@ export default {
   },
   data() {
     return {
-      currentCity: {
-        id: null,
-        code: '',
-        name: '',
-      },
-      listCity: [
-        {
-          id: 1,
-          code: 'HN',
-          name: 'Hà Nội'
-        },
-        {
-          id: 2,
-          code: 'ĐN',
-          name: 'Đà Nẵng'
-        },
-        {
-          id: 3,
-          code: 'HCM',
-          name: 'Hồ Chí Minh'
-        },
-      ]
+      //
     }
   },
   methods: {
-    setCurrentCity(city) {
-      this.currentCity = {
-        id: city.id,
-        code: city.code,
-        name: city.name
-      }
-    },
-    updateListCity(indexCity) {
-      this.listCity.splice(indexCity, 1);
-    }
+    //
   }
 }
 </script>
@@ -62,8 +34,5 @@ export default {
   color: #2c3e50;
   margin: 0px auto;
   width: 80%;
-}
-.current-city {
-  border: 2px solid red;
 }
 </style>
