@@ -232,13 +232,19 @@
             color="success"
             @click="minePendingTransactions"
           >
-            Set difficulty and start mine pending transactions to create a new block
+            Start mining
           </v-btn>
           <v-progress-circular
             v-show="isMining"
             indeterminate
             color="success"
           ></v-progress-circular>
+        </v-col>
+        <v-col
+          cols="12"
+          v-show="quandoCoin.pendingTransactions.length > 0"
+        >
+          <p>Set difficulty and start mine pending transactions to create a new block</p>
         </v-col>
       </v-row>
     </v-container>
