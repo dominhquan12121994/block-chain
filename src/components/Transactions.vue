@@ -464,18 +464,6 @@ export default {
     await this.checkIfTransactionExist();
     console.log(this.transactionCount);
     await this.checkIfWalletIsConnected();
-    
-    // console.log('Begin blockchain');
-    //
-    // const tx1 = new Transaction(myWalletAddress, 'public key goes here', 20);
-    // tx1.signTransaction(myKey);
-    // console.log(tx1);
-    // this.quandoCoin.addTransaction(tx1);
-    // this.quandoCoin.addTransaction(tx1);
-    // console.log(`Start mining...`);
-    // this.quandoCoin.minePendingTransactions(myWalletAddress);
-    // console.log(`Balance is ${this.quandoCoin.getBalanceOfAddress(myWalletAddress)}`);
-    // console.log(this.quandoCoin.chain);
   },
   methods: {
     async checkIfTransactionExist() {
@@ -565,6 +553,7 @@ export default {
       this.newTransaction.amount = '';
     },
     minePendingTransactions() {
+      this.quandoCoin.difficulty = Number(this.quandoCoin.difficulty);
       this.isMining = true;
       this.quandoCoin.minePendingTransactions(myWalletAddress);
       this.quandoCoin.pendingTransactions = [];
